@@ -49,7 +49,7 @@ def get_db_connection():
     return conn
 
 @mcp.tool()
-@require_auth
+# @require_auth
 def search_customers(
     customer_id: int = None,
     name: str = None,
@@ -95,7 +95,7 @@ def search_customers(
         conn.close()
 
 @mcp.tool()
-@require_auth
+# @require_auth
 def search_wealth_products(
     product_name: str = None,
     product_code: str = None,
@@ -160,7 +160,7 @@ def search_wealth_products(
         conn.close()
 
 @mcp.tool()
-@require_auth
+# @require_auth
 def analyze_suitability(customer_id: int, product_code: str):
     """
     自动化执行风险与偏好匹配分析。检查产品风险是否超过客户承受能力，以及金额是否符合起购点。
